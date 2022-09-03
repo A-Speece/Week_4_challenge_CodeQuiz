@@ -1,1 +1,26 @@
+#welcome-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 300px;
+}
 
+button {
+  background-color: blueviolet;
+  color: azure;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+#question-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 300px;
+}
