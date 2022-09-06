@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <header>
+      <h2 id="high-score">View high scores</h2>
+      <h2 id="timer">Time:75</h2>
+    </header>
     <div id="welcome-screen">
-      <h2>Coding Quiz Challenge</h2>
+      <h1>Coding Quiz Challenge</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-        facilis odit molestiae laboriosam asperiores magnam, fugit blanditiis
-        natus et fugiat illo tenetur nostrum, repellat debitis explicabo quasi
-        provident fuga aspernatur.
+        Try to answer the following code-related questions within the time
+        limit. Keep in mind that incorrect answers will penalize your score/time
+        by ten seconds!
       </p>
       <button id="start-button">Start Quiz</button>
     </div>
@@ -27,9 +30,19 @@
       <button id="choice4">answer4</button>
     </div>
 
-    <div id="final-screen"></div>
+    <div id="final-screen">
+      <h1>All done!</h1>
+      <h2 id="final-score">Your final Score is</h2>
+      <h2 id="initials"></h2>
+      <button id="submit-button">Submit</button>
+    </div>
 
-    <div id="highscore-screen"></div>
+    <div id="highscore-screen">
+      <h1 id="high-score">High Scores</h1>
+      <h2 id="names-score">1. AS -22</h2>
+      <button id="go-back">Go Back</button>
+      <button id="clear-scores">Clear high scores</button>
+    </div>
 
     <script src="./assets/JS/script.js"></script>
   </body>
