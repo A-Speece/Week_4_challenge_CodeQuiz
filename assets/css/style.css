@@ -19,6 +19,10 @@ button {
   margin: 5px;
 }
 
+button:hover {
+  background-color: blueviolet;
+}
+
 #question-screen {
   display: none;
   justify-content: center;
