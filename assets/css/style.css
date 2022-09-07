@@ -22,6 +22,7 @@ button {
 #question-screen {
   display: none;
   justify-content: center;
+  text-align: justify;
   align-items: center;
   flex-direction: column;
   width: 50%;
@@ -60,4 +61,8 @@ button {
 
 #timer {
   text-align: right;
+}
+
+#rightorwrong {
+  display: none;
 }

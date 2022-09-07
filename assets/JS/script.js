@@ -2,11 +2,14 @@ var welcomeScreen = document.getElementById("welcome-screen");
 var startButton = document.getElementById("start-button");
 var questionScreen = document.getElementById("question-screen");
 var highScoreScreen = document.getElementById("highscore-screen");
+var finalScoreScreen = document.getElementById("final-screen");
 var questionEl = document.getElementById("question-text");
 var choice1El = document.getElementById("choice1");
 var choice2El = document.getElementById("choice2");
 var choice3El = document.getElementById("choice3");
 var choice4El = document.getElementById("choice4");
+var finalScreenButton = document.getElementById("submit-button");
+var timerEl = document.getElementById("timer");
 
 var currentIndex = 0;
 
@@ -41,8 +44,26 @@ var questions = [
 
 function startQuiz() {
   welcomeScreen.style.display = "none";
+  countdown();
   questionScreen.style.display = "flex";
+
   displayQuestion();
+}
+
+function countdown() {
+  var timeLeft = 75;
+  var timeInterval = setInterval(function () {
+    //display message if the time is greater than 0
+    if (timeLeft !== 0) {
+      timerEl.textContent = "Time: " + timeLeft;
+      timeLeft--;
+    }
+    //if timeruns out disply my message
+    else {
+      timerEl.textContent = "";
+      clearInterval(timeInterval);
+    }
+  }, 1000);
 }
 
 function displayQuestion() {
@@ -56,11 +77,24 @@ function displayQuestion() {
   choice2El.addEventListener("click", goNext);
   choice3El.addEventListener("click", goNext);
   choice4El.addEventListener("click", goNext);
+  finalScreenButton.addEventListener("click", finalScore);
 }
 
 function goNext() {
   currentIndex++;
-  displayQuestion();
+
+  if (currentIndex === 4) {
+    questionScreen.style.display = "none";
+    finalScoreScreen.style.display = "flex";
+    console.log(currentIndex);
+  } else {
+    displayQuestion();
+  }
+}
+
+function finalScore() {
+  finalScoreScreen.style.display = "none";
+  highScoreScreen.style.display = "flex";
 }
 
 startButton.addEventListener("click", startQuiz);
