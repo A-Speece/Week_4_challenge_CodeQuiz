@@ -10,13 +10,15 @@ var choice3El = document.getElementById("choice3");
 var choice4El = document.getElementById("choice4");
 var finalScreenButton = document.getElementById("submit-button");
 var timerEl = document.getElementById("timer");
-
+var rightOrWrong = document.getElementById("rightorwrong");
 var currentIndex = 0;
+var timeLeft = 75;
 
 var questions = [
   {
     text: "Commonly used data types DO Not Include",
     choices: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+    correctAnswer: "3. alerts",
   },
   {
     text: "The condition in an if / else statement is enclosed with ___________.",
@@ -26,6 +28,7 @@ var questions = [
       "3. parenthesis",
       "4. square brackets",
     ],
+    correctAnswer: "2. curly brackets",
   },
   {
     text: "Arrays in JavaScript can be used to store _________.",
@@ -35,10 +38,12 @@ var questions = [
       "3. booleans",
       "4. all of the above",
     ],
+    correctAnswer: "4. all of the above",
   },
   {
     text: "String values must be enclosed within _________ when being assigned to variables",
     choices: ["1. commas", "2. curly brackets", "3. quotes", "4. paranthesis"],
+    correctAnswer: "3. quotes",
   },
 ];
 
@@ -51,7 +56,6 @@ function startQuiz() {
 }
 
 function countdown() {
-  var timeLeft = 75;
   var timeInterval = setInterval(function () {
     //display message if the time is greater than 0
     if (timeLeft !== 0) {
@@ -80,13 +84,25 @@ function displayQuestion() {
   finalScreenButton.addEventListener("click", finalScore);
 }
 
-function goNext() {
+function goNext(event) {
+  var correctAnswer = questions[currentIndex].correctAnswer;
+  var userAnswer = event.currentTarget.textContent;
+
+  if (correctAnswer === userAnswer) {
+    rightOrWrong.textContent = "Right";
+  } else {
+    rightOrWrong.textContent = "Wrong";
+    timeLeft -= 15;
+  }
   currentIndex++;
 
   if (currentIndex === 4) {
     questionScreen.style.display = "none";
     finalScoreScreen.style.display = "flex";
     console.log(currentIndex);
+    var finalScore = document.getElementById("final-score");
+    finalScore.textContent = "Final Score is " + timeLeft;
+    console.log(timeLeft);
   } else {
     displayQuestion();
   }
@@ -95,6 +111,16 @@ function goNext() {
 function finalScore() {
   finalScoreScreen.style.display = "none";
   highScoreScreen.style.display = "flex";
+  var userIntials = document.getElementById("initials");
+  var highScore = {
+    intials: userIntials.value,
+    score: timeLeft,
+  };
+  localStorage.setItem("highScore", JSON.stringify(highScore));
+  var savedScore = JSON.parse(localStorage.getItem("highScore"));
+
+  var nameScore = document.getElementById("names-score");
+  nameScore.textContent = savedScore.intials + "-" + savedScore.score;
 }
 
 startButton.addEventListener("click", startQuiz);

@@ -54,8 +54,9 @@ button:hover {
   margin-top: 200px;
 }
 
-.header #timer {
-  float: right;
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 #high-score {
@@ -68,5 +69,10 @@ button:hover {
 }
 
 #rightorwrong {
-  display: none;
+}
+
+#line {
+  height: 2px;
+  width: 500px;
+  background-color: black;
 }
