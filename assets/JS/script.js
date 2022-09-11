@@ -139,8 +139,8 @@ function finalScore() {
 }
 
 function clearStorage() {
-  localStorage.clear();
   nameScore.textContent = "";
+  localStorage.clear();
 }
 
 startButton.addEventListener("click", startQuiz);

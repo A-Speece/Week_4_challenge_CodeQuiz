@@ -10,6 +10,12 @@
   font-size: 25px;
 }
 
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 button {
   background-color: rgb(41, 5, 75);
   color: azure;
