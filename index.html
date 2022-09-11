@@ -10,7 +10,7 @@
   <body>
     <header>
       <h2 id="high-score">View high scores</h2>
-      <h2 id="timer"></h2>
+      <h2 id="timer">Time: 75</h2>
     </header>
     <div id="welcome-screen">
       <h1>Coding Quiz Challenge</h1>
@@ -24,11 +24,15 @@
 
     <div id="question-screen">
       <h2 id="question-text">Question 1</h2>
+      <div>
       <button id="choice1">answer1</button>
       <button id="choice2">answer2</button>
       <button id="choice3">answer3</button>
       <button id="choice4">answer4</button>
+    </div>
+    <div>
       <hr id="line" />
+    </div>
       <div id="rightorwrong">
      
       </div>
@@ -37,15 +41,21 @@
     <div id="final-screen">
       <h1>All done!</h1>
       <h2 id="final-score">Your final Score is</h2>
-      <input id="initials" type ="text">Intials</input>
-      <button id="submit-button">Submit</button>
+      <div>
+      <!-- <h2>Enter initials :</h2> -->
+      <label for="initials">Enter initials: </label>
+      <input id="initials" type ="text" size ="20"></input>
+      <button id="submit-button" >Submit</button>
+    </div>
     </div>
 
     <div id="highscore-screen">
       <h1 id="high-score">High Scores</h1>
       <h2 id="names-score"></h2>
+      <div>
       <button id="go-back">Go Back</button>
       <button id="clear-scores">Clear high scores</button>
+    </div>
     </div>
 
     <script src="./assets/JS/script.js"></script>

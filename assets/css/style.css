@@ -25,38 +25,46 @@ button:hover {
 
 #question-screen {
   display: none;
-  justify-content: center;
-  text-align: justify;
-  align-items: center;
+
   flex-direction: column;
   width: 50%;
   margin: auto;
   margin-top: 200px;
+}
+
+#question-screen div {
+  display: flex;
+  flex-direction: column;
 }
 
 #highscore-screen {
   display: none;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   width: 50%;
   margin: auto;
   margin-top: 200px;
+}
+
+#names-score {
+  background-color: rgb(240, 231, 231);
+  width: 75%;
+}
+
+#highscore-screen div {
+  flex-direction: row;
 }
 
 #final-screen {
   display: none;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   width: 50%;
   margin: auto;
   margin-top: 200px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
+#final-screen div {
+  flex-direction: row;
+  font-size: 30px;
 }
 
 #high-score {
@@ -69,10 +77,14 @@ button:hover {
 }
 
 #rightorwrong {
+  font-size: 30px;
+  color: grey;
 }
 
 #line {
-  height: 2px;
-  width: 500px;
-  background-color: black;
+  width: 900px;
+  background-color: grey;
+  display: none;
+  padding: 2px;
+  margin: 25px;
 }
