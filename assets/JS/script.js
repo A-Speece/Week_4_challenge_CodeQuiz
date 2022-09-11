@@ -137,6 +137,8 @@ function finalScore() {
     highScoreScreen.style.display = "none";
     currentIndex = 0;
     timeLeft = 75;
+    answerLine.style.display = "none";
+    rightOrWrong.textContent = "";
     startQuiz();
   });
 }
