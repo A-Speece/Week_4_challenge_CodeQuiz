@@ -6,7 +6,7 @@ This challenge is to setup a code quiz using the Html, CSS, JavaScript and web A
 
 ## Installation
 
-Website Url: GitHub Repo:
+Website Url:https://a-speece.github.io/Week_4_challenge_CodeQuiz/ GitHub Repo: https://github.com/A-Speece/Week_4_challenge_CodeQuiz.git
 
 ## Usage
 
