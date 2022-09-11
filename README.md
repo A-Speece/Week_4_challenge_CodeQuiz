@@ -19,8 +19,8 @@ so that I can guage my progress compared to my peers.
 
 ![Code Quiz Screen 1.png](./assets/images/Code%20Quiz%20Screen%201.png)
 
-![Code Quiz Screen 2.png](./Assets/images/Code%20Quiz%20Screen%202.png)
+![Code Quiz Screen 2.png](./assets/images/Code%20Quiz%20Screen%202.png)
 
-![Code Quiz Screen 3.png](./Assets/images/Code%20Quiz%20Screen%203.png)
+![Code Quiz Screen 3.png](./assets/images/Code%20Quiz%20Screen%203.png)
 
-![Code Quiz Screen 4.png](./Assets/images/Code%20Quiz%20Screen%204.png)
+![Code Quiz Screen 4.png](./assets/images/Code%20Quiz%20Screen%204.png)
