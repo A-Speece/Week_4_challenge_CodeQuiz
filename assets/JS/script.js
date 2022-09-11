@@ -128,7 +128,10 @@ function finalScore() {
   var nameScore = document.getElementById("names-score");
   nameScore.textContent = savedScore.intials + "-" + savedScore.score;
 
-  clearScoresButton.addEventListener("click", clearStorage);
+  clearScoresButton.addEventListener("click", function () {
+    nameScore.textContent = "";
+    clearStorage();
+  });
 
   goBackButton.addEventListener("click", function () {
     highScoreScreen.style.display = "none";
@@ -139,7 +142,6 @@ function finalScore() {
 }
 
 function clearStorage() {
-  nameScore.textContent = "";
   localStorage.clear();
 }
 
