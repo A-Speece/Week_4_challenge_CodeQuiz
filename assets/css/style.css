@@ -1,3 +1,4 @@
+/* styling for the welcome screen */
 #welcome-screen {
   display: flex;
   justify-content: center;
@@ -9,13 +10,18 @@
   text-align: center;
   font-size: 25px;
 }
-
+/* styling for the header */
 header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+#timer {
+  text-align: right;
+}
+
+/* styling for the button including the color change when hovering */
 button {
   background-color: rgb(41, 5, 75);
   color: azure;
@@ -29,6 +35,7 @@ button:hover {
   background-color: blueviolet;
 }
 
+/* styling for the question screens  */
 #question-screen {
   display: none;
 
@@ -43,6 +50,20 @@ button:hover {
   flex-direction: column;
 }
 
+#rightorwrong {
+  font-size: 30px;
+  color: grey;
+}
+
+#line {
+  width: 900px;
+  background-color: grey;
+  display: none;
+  padding: 2px;
+  margin: 25px;
+}
+
+/* styling for the High Score Screen */
 #highscore-screen {
   display: none;
   flex-direction: column;
@@ -60,6 +81,12 @@ button:hover {
   flex-direction: row;
 }
 
+#high-score {
+  text-align: left;
+  color: blueviolet;
+}
+
+/* styling for the final score screen */
 #final-screen {
   display: none;
   flex-direction: column;
@@ -71,26 +98,4 @@ button:hover {
 #final-screen div {
   flex-direction: row;
   font-size: 30px;
-}
-
-#high-score {
-  text-align: left;
-  color: blueviolet;
-}
-
-#timer {
-  text-align: right;
-}
-
-#rightorwrong {
-  font-size: 30px;
-  color: grey;
-}
-
-#line {
-  width: 900px;
-  background-color: grey;
-  display: none;
-  padding: 2px;
-  margin: 25px;
 }

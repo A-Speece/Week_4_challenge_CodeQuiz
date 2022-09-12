@@ -1,3 +1,4 @@
+// Global Variables//
 var welcomeScreen = document.getElementById("welcome-screen");
 var startButton = document.getElementById("start-button");
 var goBackButton = document.getElementById("go-back");
@@ -18,6 +19,7 @@ var currentIndex = 0;
 var currentScore = 0;
 var timeLeft = 75;
 
+//Questions and Answers Array//
 var questions = [
   {
     text: "Commonly used data types DO Not Include",
@@ -51,6 +53,7 @@ var questions = [
   },
 ];
 
+//Function to start the quiz and load the question screen//
 function startQuiz() {
   welcomeScreen.style.display = "none";
   countdown();
@@ -59,6 +62,7 @@ function startQuiz() {
   displayQuestion();
 }
 
+//function for the timer//
 function countdown() {
   var timeInterval = setInterval(function () {
     //display message if the time is greater than 0
@@ -74,6 +78,7 @@ function countdown() {
   }, 500);
 }
 
+//function to display the questions//
 function displayQuestion() {
   questionEl.textContent = questions[currentIndex].text;
   choice1El.textContent = questions[currentIndex].choices[0];
@@ -88,6 +93,7 @@ function displayQuestion() {
   finalScreenButton.addEventListener("click", finalScore);
 }
 
+//function to go to the next question, highscore screen//
 function goNext(event) {
   var correctAnswer = questions[currentIndex].correctAnswer;
   var userAnswer = event.currentTarget.textContent;
@@ -114,6 +120,8 @@ function goNext(event) {
   }
 }
 
+//function to load the final score screen and load the local storage with the user //
+//initials and score //
 function finalScore() {
   finalScoreScreen.style.display = "none";
   highScoreScreen.style.display = "flex";
@@ -143,8 +151,10 @@ function finalScore() {
   });
 }
 
+//function used to clear the local storage when the clear score button is clicked//
 function clearStorage() {
   localStorage.clear();
 }
 
+//the event listener to start the quiz//
 startButton.addEventListener("click", startQuiz);
